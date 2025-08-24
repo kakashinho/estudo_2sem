@@ -1,0 +1,31 @@
+{
+  "name": "estudo_2sem",
+  "version": "1.0.0",
+  "description": "Repositório dedicado ao estudo de tecnologias do 2 semestre do curso curso de graduação Tecnólogo em Desenvolvimento de Software Multiplataforma na Fatec São José dos Campos. São projetos básicos, para meu aprendizado com o projeto do 2º Semestre.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "start": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kakashinho/estudo_2sem.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kakashinho/estudo_2sem/issues"
+  },
+  "homepage": "https://github.com/kakashinho/estudo_2sem#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.2"
+  }
+}

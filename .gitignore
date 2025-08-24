@@ -1,0 +1,9 @@
+# Ignora tudo que é (oculto)
+.*
+
+# Ignora Node.js
+node_modules/
+
+# permite 
+!.gitignore
+!.git/

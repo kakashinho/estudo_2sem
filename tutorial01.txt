@@ -1,0 +1,60 @@
+//Verfique as versões:
+node -v
+npm -v
+
+//Crie o ambiente: 
+npm init -y
+
+//Instale as dependências:
+npm install express
+npm install --save-dev typescript @types/express ts-node ts-node-dev
+
+//Configure o TypeScript:
+npx tsc --init
+
+//Ajuste seu tsconfig.json:
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
+
+//Configure o package.json:
+"scripts": {
+  "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+  "start": "ts-node src/index.ts"
+}
+
+//Crie src/server/Server.ts:
+
+import express from 'express'
+
+const app = express()
+
+app.get('/', (req, res) => {
+  res.send('Servidor funcionando!')
+});
+
+export { app }
+
+//Crie src/index.ts:
+import {app} from './server/Server'
+
+app.listen(3333, ()=> console.log('App rodando!'))
+
+//Rodar o projeto:
+npm run dev
+
+//Acesse o Localhost na porta 3333:
+http://127.0.0.1:3333/
+
+//Como apagar o ambiente e recriar:
+Remove-Item -Recurse -Force node_modules
+Remove-Item -Force package-lock.json
+Remove-Item -Recurse -Force dist
+npm install
